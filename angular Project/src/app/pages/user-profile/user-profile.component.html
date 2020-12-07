@@ -1,0 +1,136 @@
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+  <!-- Mask -->
+  <span class="mask bg-gradient-danger opacity-8"></span>
+  <!-- Header container -->
+  <div class="container-fluid d-flex align-items-center">
+    <div class="row">
+      <div class="col-lg-7 col-md-10">
+        <h2 class="display-2 text-white">Affect Product to stores</h2>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+      <div class="card card-profile shadow">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 order-lg-2">
+            <div class="card-profile-image">
+              <a href="javascript:void(0)">
+                <img src="assets/img/theme/{{oo}}" *ngIf=" oo !=null " >
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+
+        </div>
+        <div class="card-body pt-0 pt-md-4">
+          <div class="row">
+            <div class="col">
+              <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                <br><br>
+                <div>
+                  <span class="heading"></span>
+                  <span class="description"></span>
+                </div>
+                <div>
+                  <span class="heading"></span>
+                  <span class="description"></span>
+                </div>
+                <div>
+                  <span class="heading"></span>
+                  <span class="description"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <h3>
+              {{Product.name}}<span class="font-weight-light"> </span>
+            </h3>
+            <div class="h5 font-weight-300">
+              <i class="ni location_pin mr-2"></i>{{Product.type}}
+            </div>
+            <div class="h5 mt-4">
+              <i class="ni business_briefcase-24 mr-2"></i>{{Product.quantity}}<span class="font-weight-light"> Piéces disponibles</span>
+            </div>
+            <div>
+              <i class="ni education_hat mr-2"></i>{{Product.price}}<span class="font-weight-light">  DT </span>
+            </div>
+            <hr class="my-4" />
+            <p>{{Product.description}}</p>
+            <h3><span class="font-weight-light">  TVA </span>{{Product.tva}} <span class="font-weight-light">  % </span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8 order-xl-1">
+      <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-0">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h3 class="mb-0">Product & Store </h3>
+            </div>
+
+          </div>
+        </div>
+        <div class="card-body">
+
+            <h6 class="heading-small text-muted mb-4"> information</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="">Product </label>
+
+                      <select type="number" id="" class="form-control form-control-alternative" placeholder="city" [(ngModel)]="pull" (click)="aa()">
+
+                        <ng-container *ngFor="let plas of  Product$">
+                          <option   value="{{plas.name}}"  > {{plas.name}}</option>
+                        </ng-container>
+
+                      </select>
+                    </div>
+                    <a href="javascript:void(0)"  >
+                      <img alt="Image placeholder"  *ngIf=" oo !=null " src="../assets/img/theme/{{oo}}" class="w3-hover-opacity" style="width:80px" [(ngModel)]="oo" >
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+                <div class="col-lg-6">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for=""> Fixe Store  </label>
+
+                      <select type="number" id="" class="form-control form-control-alternative" placeholder="city" [(ngModel)]="pulll" (click)="aaaa()">
+
+
+                        <ng-container *ngFor="let plas of  Store_Fixe$">
+                          <option   value="{{plas.name_store}}"  > {{plas.name_store}}</option>
+                        </ng-container>
+
+                      </select>
+                    </div>
+                    <a href="javascript:void(0)"  >
+
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div _ngcontent-c10="" class="text-center"><button  (click)=" affecter()"  _ngcontent-c10="" class="btn btn-primary my-4" type="button">Affect</button></div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
